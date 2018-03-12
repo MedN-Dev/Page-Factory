@@ -1,6 +1,5 @@
 <template>
   <div class="preview-window">
-    
   </div>
 </template>
 <script>

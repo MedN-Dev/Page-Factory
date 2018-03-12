@@ -1,36 +1,39 @@
 <template>
   <a :href="data.link" class="widget-product-item">
-    <img :src="data.image_url" class="product-image"/>
-    <div class="product-name">{{data.title}}</div>
+    <div class="product-image">{{data.upload}}</div>
+    <div class="product-name">{{data.name}}</div>
     <div class="product-desc">{{data.desc}}</div>
-    <div class="product-info">{{data.promotion_1}}</div>
-    <div class="product-info">{{data.promotion_2}}</div>
+    <div class="product-info">{{data.info_1}}</div>
+    <div class="product-info">{{data.info_2}}</div>
   </a>
 </template>
 <script>
-  export default {
-    name: 'product-item',
-    props: {
-      data: {}
-    },
-    data () {
-      return {
-      }
-    },
-    methods: {
-    },
-    mounted () {
+export default {
+  name: 'product-item',
+  props: {
+    data: {}
+  },
+  data () {
+    return {
     }
+  },
+  methods: {
+  },
+  mounted () {
   }
+}
 </script>
 <style lang="less">
   .widget-product-item {
     text-align: center;
     display: block;
     background-color: #fff;
+    border: 1px solid #868686;
+    width: 150px;
     .product-image {
       display: inline-block;
       width: 100%;
+      border: 1px dotted #868686;
       background-color: #bfbfbf;
     }
     .product-name {

@@ -9,7 +9,6 @@
   </div>
 </template>
 <script>
-import ComponentList from 
 export default {
   name: 'components-store',
   data () {
