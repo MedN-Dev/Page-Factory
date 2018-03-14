@@ -1,0 +1,13 @@
+[{
+	"components": "WidgetRow",
+	"datas": {},
+	"labels": ["6-6"],
+	"children": {
+       	"components": "WidgetColumn",
+       	"datas": {
+       	   "cols": ["col-md-6", "col-md-6"]
+       	},
+       	"labels": [6, 6]
+	}
+  }
+]

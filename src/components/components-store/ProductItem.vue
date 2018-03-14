@@ -1,5 +1,5 @@
 <template>
-  <a :href="data.link" class="widget-product-item">
+  <a :href="'/'" class="widget-product-item">
     <div class="product-image">{{data.upload}}</div>
     <div class="product-name">{{data.name}}</div>
     <div class="product-desc">{{data.desc}}</div>

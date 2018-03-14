@@ -1,3 +1,11 @@
-[
-  
+[{
+ "data": {
+   "upload": "点击上传",
+   "name": "caolei",
+   "desc": "demommmmmmmm",
+   "info_1": "ssssssss",
+   "info_2": "dddddddd"
+ },
+ "components": "ProductItem"
+}
 ]

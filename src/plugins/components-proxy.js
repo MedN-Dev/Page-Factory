@@ -1,10 +1,16 @@
 // import Vue from 'vue'
 import ComponentList from '@/components/components-store'
+import LayoutList from '@/components/layout-store'
+
 import Vue from 'vue'
 const register = {
   install: () => {
+    console.log('plugin install')
     for (let com in ComponentList) {
       Vue.component(com, ComponentList[com])
+    }
+    for (let layout in LayoutList) {
+      Vue.component(layout, LayoutList[layout])
     }
     Vue.component('components-proxy', {
       props: {
@@ -28,7 +34,6 @@ const register = {
             styles: this.styles
           }
         })
-        console.log(VNode)
         return VNode
       }
     })
