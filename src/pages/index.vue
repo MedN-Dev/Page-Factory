@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    {{resultJSON}}
     <div class="row">
         <div class="compoments col-md-4">
           <components-store>
@@ -16,7 +17,7 @@
           </layout-store>
         </div>
         <div class="preview col-md-8">
-          <preview-window></preview-window>
+          <preview-window :getResult="getResult"></preview-window>
           <!-- <draggable v-model="list1" :options="dragOptions" element="div" style="height: 100px;">
             <div v-for="element in list1">
               {{element}}
@@ -45,9 +46,7 @@ export default {
       needClone: true,
       isDragging: false,
       layoutData: LayoutData,
-      result: {
-        component: 'WidgetContainer'
-      }
+      resultJSON: {}
     }
   },
   computed: {
@@ -75,9 +74,8 @@ export default {
       const draggedElement = draggedContext.element
       return (!relatedElement || !relatedElement.fixed) && !draggedElement.fixed
     },
-    getRow (data) {
-    },
-    getColumn (data) {
+    getResult (data) {
+      this.resultJSON = data
     }
   },
   watch: {

@@ -12,6 +12,7 @@ import draggable from 'vuedraggable'
 export default {
   name: 'preview-window',
   components: { draggable },
+  props: ['getResult'],
   computed: {
     dragOptions () {
       return {
