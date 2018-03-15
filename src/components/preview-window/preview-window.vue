@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <draggable v-model="list" :options="dragOptions" element="div" class="preview-window">
       <div v-for="(element, index) in list" :key="index">
-        <components-proxy :name="element.components" :props="{children: element.children, functions: getRow}"></components-proxy>
+        <components-proxy :name="element.components" :props="{children: element.children, functions: getRow, isPreview: true}"></components-proxy>
       </div>
     </draggable>
   </div>

@@ -1,11 +1,13 @@
 <template>
-  <a :href="'/'" class="widget-product-item">
-    <div class="product-image">{{data.upload}}</div>
-    <div class="product-name">{{data.name}}</div>
-    <div class="product-desc">{{data.desc}}</div>
-    <div class="product-info">{{data.info_1}}</div>
-    <div class="product-info">{{data.info_2}}</div>
-  </a>
+  <div v-if="isPreview">
+    <a :href="'/'" class="widget-product-item">
+      <div class="product-image">{{data.upload}}</div>
+      <div class="product-name">{{data.name}}</div>
+      <div class="product-desc">{{data.desc}}</div>
+      <div class="product-info">{{data.info_1}}</div>
+      <div class="product-info">{{data.info_2}}</div>
+    </a>
+  </div>
 </template>
 <script>
 export default {
